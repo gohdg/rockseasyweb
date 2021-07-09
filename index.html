@@ -6,56 +6,70 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Document</title>
     <style>
-      img {
-        vertical-align: top;
+      * {
+        margin: 0;
+        padding: 0;
       }
-      .html5news-slide {
-        width: 800px;
-        height: 300px;
-        padding: 10px;
-        border: 2px solid green;
-        margin: 0 auto;
-        position: relative;
-      }
-      .html5news-slide img {
-        float: left;
-      }
-
-      .controls a {
-        display: block;
-        white-space: nowrap;
+      .mainmenu {
         background: #333;
-        text-align: center;
-        line-height: 50px;
+        padding-left: 40px;
+      }
+      .mainmenu ul {
+        background: #666;
+        display: none;
+      }
+      .mainmenu:after {
+        content: "";
+        display: block;
+        clear: both;
+      }
+      .mainmenu > li {
+        float: left;
+        list-style: none;
+        margin-right: 30px;
+        line-height: 35px;
         color: #fff;
-        position: absolute;
-        top: calc(50% - 25px);
+        cursor: pointer;
+        /* position: relative; */
       }
+      .mainmenu > li ul li {
+        padding: 0 10px;
+        white-space: nowrap;
+      }
+      /* 마우스를 올리면 서브메뉴를 display를 이용하여 나타나도록 합니다. */
 
-      .prev {
-        right: 100%;
-      }
-      .next {
-        left: 100%;
+      /* .mainmenu li:first-child:hover ul {
+        display: block;
+        position: absolute;
+        top: 100%;
+      } */
+
+      .mainmenu > li:hover ul {
+        display: block;
+        position: absolute;
+        /* top: 100%; */
       }
     </style>
   </head>
   <body>
-    <div class="html5news-slide">
-      <img
-        src="https://s3-us-west-2.amazonaws.com/s.cdpn.io/485050/restaurant_title.jpg"
-        alt="slide1"
-      />
-      <p>
-        Lorem ipsum dolor sit amet consectetur adipisicing elit. Ad earum
-        officiis et? Corrupti ea consequuntur tempore fuga qui laborum odio
-        repudiandae omnis iusto alias exercitationem cum culpa rem, porro
-        fugiat!
-      </p>
-      <div class="controls">
-        <a href="#" class="prev">previous project</a>
-        <a href="#" class="next">Next project</a>
-      </div>
-    </div>
+    <ul class="mainmenu">
+      <li>
+        About Us
+        <ul>
+          <li>ceo greeting</li>
+          <li>history</li>
+          <li>vision</li>
+        </ul>
+      </li>
+      <li>
+        Works
+        <ul>
+          <li>Design</li>
+          <li>Mobile</li>
+        </ul>
+      </li>
+      <li>Services</li>
+      <li>Location</li>
+    </ul>
   </body>
 </html>
