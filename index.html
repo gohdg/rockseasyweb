@@ -10,58 +10,41 @@
         margin: 0;
         padding: 0;
       }
-
-      .header {
-        width: 960px;
-        background: #ccc;
-        margin: 0 auto;
+      img {
+        vertical-align: top;
       }
 
-      .logo {
-        float: left;
-        line-height: 60px;
-      }
-      .navmenu {
-        float: right;
+      .box {
+        border: 1px solid;
+        position: absolute;
       }
 
-      .header:after {
-        content: "";
-        display: block;
-        clear: both;
+      .a {
+        left: 50px;
+        top: 50px;
+        padding: 10px;
+        background: blue;
       }
 
-      .navmenu ul li {
-        float: left;
-        list-style: none;
-        margin-left: 20px;
-        line-height: 60px;
-      }
-
-      .navmenu ul:after {
-        content: "";
-        display: block;
-        clear: both;
-      }
-
-      a {
-        text-decoration: none;
-        color: #000;
+      .b {
+        left: 100px;
+        top: 100px;
+        padding: 10px;
+        background: red;
       }
     </style>
   </head>
   <body>
-    <div class="header">
-      <h1 class="logo"><a href="#">Logo</a></h1>
-      <div class="navmenu">
-        <ul>
-          <li><a href="#">Login</a></li>
-          <li><a href="#">Member Join</a></li>
-
-          <li><a href="#">Site map</a></li>
-          <li><a href="#">Location</a></li>
-        </ul>
-      </div>
+    <div class="box a">
+      <img src="http://via.placeholder.com/100x120" alt="" />
     </div>
+    <div class="box b">
+      <img src="http://via.placeholder.com/100x120" alt="" />
+    </div>
+    <p>
+      Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aut a dolorum
+      labore autem suscipit quasi sunt et quas possimus reprehenderit fuga,
+      dolore repellendus unde earum aperiam magnam repellat voluptates. Ex.
+    </p>
   </body>
 </html>
