@@ -6,45 +6,61 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Document</title>
     <style>
-      li {
-        list-style: none;
-        width: 400px;
-        height: 200px;
-        position: relative;
-        overflow: hidden;
+      .linear {
+        width: 300px;
+        height: 300px;
+        border: 1px solid black;
+        /* background: linear-gradient(방향, 색상 위치, 색상 위치); */
+        /* background: linear-gradient(to bottom, #000 0%, #fff 100%); */
+        /* background: linear-gradient(
+          to bottom,
+          #2989cc 0%,
+          #fff 50%,
+          #906a00 52%,
+          #d99f00 64%,
+          #fff 100%
+        ); */
+        /* Permalink - use to edit and share this gradient: https://colorzilla.com/gradient-editor/#000000+0,ffffff+50,2989d8+50,ffffff+50,000000+100 */
+        background: #000000; /* Old browsers */
+        background: -moz-linear-gradient(
+          -45deg,
+          #000000 0%,
+          #ffffff 50%,
+          #2989d8 50%,
+          #ffffff 50%,
+          #000000 100%
+        ); /* FF3.6-15 */
+        background: -webkit-linear-gradient(
+          -45deg,
+          #000000 0%,
+          #ffffff 50%,
+          #2989d8 50%,
+          #ffffff 50%,
+          #000000 100%
+        ); /* Chrome10-25,Safari5.1-6 */
+        background: linear-gradient(
+          135deg,
+          #000000 0%,
+          #ffffff 50%,
+          #2989d8 50%,
+          #ffffff 50%,
+          #000000 100%
+        ); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+        filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#000000', endColorstr='#000000',GradientType=1 ); /* IE6-9 fallback on horizontal gradient */
       }
-
-      li:after {
-        content: "Welcome";
-        position: absolute;
-        left: 100%;
-        top: 0;
-        right: -100%;
-        bottom: 0;
-        background: rgba(0, 0, 0, 0.7);
-        color: #fff;
-        text-align: center;
-        line-height: 200px;
-        /* opacity: 0; */
-        transition: 0.5s;
-      }
-
-      li:hover::after {
-        left: 0;
-        right: 0;
+      .radial {
+        width: 300px;
+        height: 300px;
+        border: 1px solid black;
+        background: radial-gradient(ellipse at center, #000 0%, #fff 100%);
       }
     </style>
   </head>
   <body>
-    <ul>
-      <li>
-        <img src="https:via.placeholder.com/400x200" alt="" />
-        <!-- <span>image title</span> -->
-      </li>
-      <li>
-        <img src="https:via.placeholder.com/400x200" alt="" />
-        <!-- <span>image title</span> -->
-      </li>
-    </ul>
+    <h1>Gradient</h1>
+    <h2>Linear gradient</h2>
+    <div class="linear">Linear</div>
+    <h2>Radial gradient</h2>
+    <div class="radial">Radial</div>
   </body>
 </html>
