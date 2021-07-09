@@ -6,70 +6,27 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Document</title>
     <style>
-      * {
-        margin: 0;
-        padding: 0;
+      .photo img {
+        width: 100px;
+        opacity: 0;
+        transition: all 2s 1s ease-in-out;
+        /* transition: width 2s 0s ease-in-out, margin-left 2s 2s ease-in; */
+        /* transition-property: width;
+        transition-duration: 2s; */
+        /* transition-delay: 1s; */
+        /* transition-timing-function: ease-in-out; */
       }
-      .mainmenu {
-        background: #333;
-        padding-left: 40px;
-      }
-      .mainmenu ul {
-        background: #666;
-        display: none;
-      }
-      .mainmenu:after {
-        content: "";
-        display: block;
-        clear: both;
-      }
-      .mainmenu > li {
-        float: left;
-        list-style: none;
-        margin-right: 30px;
-        line-height: 35px;
-        color: #fff;
-        cursor: pointer;
-        /* position: relative; */
-      }
-      .mainmenu > li ul li {
-        padding: 0 10px;
-        white-space: nowrap;
-      }
-      /* 마우스를 올리면 서브메뉴를 display를 이용하여 나타나도록 합니다. */
 
-      /* .mainmenu li:first-child:hover ul {
-        display: block;
-        position: absolute;
-        top: 100%;
-      } */
-
-      .mainmenu > li:hover ul {
-        display: block;
-        position: absolute;
-        /* top: 100%; */
+      .photo:hover img {
+        width: 400px;
+        margin-left: 100px;
+        opacity: 1;
       }
     </style>
   </head>
   <body>
-    <ul class="mainmenu">
-      <li>
-        About Us
-        <ul>
-          <li>ceo greeting</li>
-          <li>history</li>
-          <li>vision</li>
-        </ul>
-      </li>
-      <li>
-        Works
-        <ul>
-          <li>Design</li>
-          <li>Mobile</li>
-        </ul>
-      </li>
-      <li>Services</li>
-      <li>Location</li>
-    </ul>
+    <div class="photo">
+      <img src="https://via.placeholder.com/100x100" alt="tree" />
+    </div>
   </body>
 </html>
